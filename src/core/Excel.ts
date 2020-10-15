@@ -93,9 +93,10 @@ export class Excel
      * @param {IWebFs.WorkBook} data
      */
     private _downLoad = async (fileName: string, data: IWebFs.WorkBook) => {
+        console.log(JSON.parse(JSON.stringify(data)));
         const wopts: any = { bookType: "xlsx", bookSST: false, type: "binary" };
         const wbout = xlsx.write(data, wopts);
-
+        console.log(wbout);
         function s2ab(s) {
             const buf = new ArrayBuffer(s.length);
             const view = new Uint8Array(buf);
@@ -106,6 +107,7 @@ export class Excel
         }
 
         const blob = new Blob([s2ab(wbout)], { type: "" });
+        console.log(blob);
         saveAs(blob, fileName);
     }
 
@@ -155,6 +157,7 @@ export class Excel
         // }
         return res;
     }
+
     /**
      * @public 暴露到外部的提取 excel 方法
      * @param {string} fileName
