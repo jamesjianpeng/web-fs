@@ -18,7 +18,9 @@
         "comment-format": [true, "check-space"],
         "indent": [true, "space", 4],
         "no-eval": true,
-        "no-internal-module": true
+        "no-internal-module": true,
+        "no-bitwise": false,
+        "forin": true
     },
     "rulesDirectory": [],
     "triple-equals": [true, "allow-null-check"]

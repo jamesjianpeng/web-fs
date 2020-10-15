@@ -1,2 +1,3 @@
-import { core } from './dist/index.js'
-document.querySelector('#root').innerHTML = core()
+import { excel } from './dist/index.js'
+console.log(excel)
+document.querySelector('#root').innerHTML = 'core()'

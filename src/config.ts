@@ -1,1 +1,1 @@
-export const config = 'web-lib-template';
+export const config = "web-lib-template";
